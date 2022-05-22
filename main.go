@@ -30,7 +30,7 @@ type StreamInfo struct {
 }
 
 func main() {
-	channelsName := flag.String("channels", "gerifield,gibbonrike,marinemammalrescue", "Twitch channels name to check")
+	channelsName := flag.String("channels", "gerifield,gibbonrike,marinemammalrescue,moakaash", "Twitch channels name to check")
 
 	clientID := flag.String("clientID", "", "Twitch App ClientID")
 	clientSecret := flag.String("clientSecret", "", "Twitch App clientSecret")
@@ -76,7 +76,7 @@ func main() {
 	}
 
 	for _, d := range r.StreamInfos {
-		fmt.Printf("%s (%d) %s\n", d.UserName, d.ViewerCount, d.Type)
+		fmt.Printf("%s (%d) %s - [%s] %s\n", d.UserName, d.ViewerCount, d.Type, d.Language, d.Title)
 	}
 
 }
