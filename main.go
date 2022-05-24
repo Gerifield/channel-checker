@@ -30,7 +30,7 @@ type StreamInfo struct {
 }
 
 func main() {
-	channelsName := flag.String("channels", "gerifield,gibbonrike,marinemammalrescue,moakaash", "Twitch channels name to check")
+	channelsName := flag.String("channels", "gerifield,gibbonrike,marinemammalrescue,moakaash,streaminks", "Twitch channels name to check")
 
 	clientID := flag.String("clientID", "", "Twitch App ClientID")
 	clientSecret := flag.String("clientSecret", "", "Twitch App clientSecret")
